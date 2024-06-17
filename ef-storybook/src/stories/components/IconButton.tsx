@@ -1,7 +1,7 @@
 interface IfIconButtonProps {
   alt: string;
   iconPath: string;
-  onClick: () => void;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function IconButton({
@@ -11,7 +11,7 @@ export default function IconButton({
 }: IfIconButtonProps) {
   return (
     <button onClick={onClick}>
-      <img src={iconPath} alt={alt} />
+      <img alt={alt} src={iconPath} />
     </button>
   );
 }
