@@ -36,6 +36,11 @@ const meta = {
       description: "에러 상태 여부",
       defaultValue: false,
     },
+    id: {
+      control: "text",
+      description: "텍스트 필드의 id",
+      defaultValue: "",
+    },
     onChange: { action: "changed", description: "텍스트 필드 값 변경 이벤트" },
     onIconClick: { action: "clicked", description: "버튼 클릭 이벤트" },
   },
@@ -57,5 +62,6 @@ export const Default: Story = {
     value: "",
     errorMessage: "텍스트를 확인해주세요",
     isError: false,
+    id: "email",
   },
 };
