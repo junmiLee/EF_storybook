@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     borderRadius: {
       "primary-button": "5px",
+      "tag-button": "17.5px",
     },
     fontFamily: {
       body: ["Noto Sans KR"],
@@ -26,6 +27,23 @@ module.exports = {
           fontWeight: "400",
         },
       ],
+      base: [
+        "16px",
+        {
+          lineHeight: "24px",
+          letterSpacing: "0",
+          fontWeight: "400",
+        },
+      ],
+      xl: ["20px", "30px"],
+      "2xl": [
+        "24px",
+        {
+          lineHeight: "36px",
+          letterSpacing: "0",
+          fontWeight: "700",
+        },
+      ],
     },
     colors: {
       primary: " #1d2745",
@@ -37,6 +55,7 @@ module.exports = {
       mono300: " #d6d7d9",
       error: " #d01e1e",
       social: "#395997",
+      "dark-Opacity": "rgba(255, 255, 255, 0.1)",
     },
   },
   plugins: [],
