@@ -1,29 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    borderRadius: {
+      "primary-button": "5px",
+    },
     fontFamily: {
       body: ["Noto Sans KR"],
     },
     fontSize: {
-      xs: ["12px",
+      xs: [
+        "12px",
         {
           lineHeight: "18px",
           letterSpacing: "0",
-          fontWeight: "400"
-        }
+          fontWeight: "400",
+        },
       ],
       sm: [
-        "14px", 
+        "14px",
         {
           lineHeight: "21px",
           letterSpacing: "0",
           fontWeight: "400",
-        }
-      ]
+        },
+      ],
     },
-     colors: {
+    colors: {
       primary: " #1d2745",
       secondary: " #1de5d4",
       tertiary: " #f52c50",
@@ -32,8 +36,8 @@ module.exports = {
       mono200: " #bebebe",
       mono300: " #d6d7d9",
       error: " #d01e1e",
+      social: "#395997",
     },
   },
   plugins: [],
-}
-
+};
