@@ -20,8 +20,8 @@ module.exports = {
       "2xl": "2rem",
     },
     colors: {
-      Primary: "#1b1829",
-      "main-off": "#e6007e",
+      primary: "#1b1829",
+      mainOff: "#e6007e",
       "main-on": "#8b004c",
       "secondary-off": "#008cff",
       "secondary-on": "#005ba6",

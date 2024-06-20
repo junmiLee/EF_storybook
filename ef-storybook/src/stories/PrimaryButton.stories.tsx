@@ -21,10 +21,10 @@ const meta = {
     theme: {
       control: {
         type: "select",
-        options: ["dark", "light", "social", "text"],
+        options: ["base", "main", "social", "text"],
       },
       description: "버튼 테마",
-      defaultValue: "dark",
+      defaultValue: "base",
     },
     children: {
       control: "text",
@@ -46,18 +46,18 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const Base: Story = {
   args: {
     children: "Button",
-    theme: "dark",
+    theme: "base",
     disabled: false,
   },
 };
 
-export const Light: Story = {
+export const Main: Story = {
   args: {
     children: "Button",
-    theme: "light",
+    theme: "main",
     disabled: false,
   },
 };
@@ -81,7 +81,7 @@ export const Text: Story = {
 export const Disabled: Story = {
   args: {
     children: "Button",
-    theme: "dark",
+    theme: "base",
     disabled: true,
   },
 };

@@ -1,4 +1,4 @@
-type PrimaryButtonTheme = "base" | "light" | "social" | "text";
+type PrimaryButtonTheme = "base" | "main" | "social" | "text";
 
 interface IfPrimaryButtonProps {
   theme: PrimaryButtonTheme;
@@ -8,7 +8,7 @@ interface IfPrimaryButtonProps {
 }
 
 const base = "bg-primary text-white";
-const main = "bg-main-off text-primary";
+const main = "bg-mainOff text-white";
 const social = "bg-social text-white";
 const text = "bg-transparent text-white";
 const disabledStyle = "disabled:bg-mono100 disabled:text-mono200";
@@ -22,6 +22,7 @@ const color: Record<PrimaryButtonTheme, string> = {
 
 export default function PrimaryButton({
   theme,
+
   children,
   onClick,
   disabled,
@@ -31,7 +32,6 @@ export default function PrimaryButton({
       className={`
       rounded-primary-button
       w-full
-      bg-primary
       h-[59px]
       ${color[theme]}
       ${disabledStyle}
