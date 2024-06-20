@@ -1,4 +1,4 @@
-type PrimaryButtonTheme = "dark" | "light" | "social" | "text";
+type PrimaryButtonTheme = "base" | "light" | "social" | "text";
 
 interface IfPrimaryButtonProps {
   theme: PrimaryButtonTheme;
@@ -7,15 +7,15 @@ interface IfPrimaryButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const dark = "bg-primary text-white";
-const light = "bg-white text-primary";
+const base = "bg-primary text-white";
+const main = "bg-main-off text-primary";
 const social = "bg-social text-white";
 const text = "bg-transparent text-white";
 const disabledStyle = "disabled:bg-mono100 disabled:text-mono200";
 
 const color: Record<PrimaryButtonTheme, string> = {
-  dark,
-  light,
+  base,
+  main,
   social,
   text,
 };
