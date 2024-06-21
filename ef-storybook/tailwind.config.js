@@ -1,8 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 module.exports = {
   content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main-hover": "#8b004c",
+        "secondary-hover": "#005ba6",
+        "button01-hover": "#1b1829",
+      },
+    },
     borderRadius: {
       "primary-button": "5px",
       "tag-button": "17.5px",
@@ -14,19 +20,16 @@ module.exports = {
       "2xs": "0.625rem",
       xs: "0.75rem",
       sm: "0.875rem",
-      base: "1rem",
+      primary: "1rem",
       lg: "1.125rem",
       xl: "1.5rem",
       "2xl": "2rem",
     },
     colors: {
       primary: "#1b1829",
-      mainOff: "#e6007e",
-      "main-on": "#8b004c",
-      "secondary-off": "#008cff",
-      "secondary-on": "#005ba6",
-      "button01-off": "#404040",
-      "button01-on": "#000000",
+      main: "#e6007e",
+      secondary: "#008cff",
+      button01: "#404040",
       white: "#ffffff",
       "board-bg": "#f3f4f6",
       "input-off-bg": "#f9fafb",

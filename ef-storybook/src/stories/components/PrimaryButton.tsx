@@ -1,41 +1,48 @@
-type PrimaryButtonTheme = "base" | "main" | "social" | "text";
+import classNames from "classnames";
+
+type PrimaryButtonTheme = "main" | "secondary" | "button01";
+type PrimaryHoverButton = "mainHover" | "secondaryHover" | "button01Hover";
 
 interface IfPrimaryButtonProps {
   theme: PrimaryButtonTheme;
+  themeHoverColor: PrimaryHoverButton;
   disabled: boolean;
   children: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const base = "bg-primary text-white";
-const main = "bg-mainOff text-white";
-const social = "bg-social text-white";
-const text = "bg-transparent text-white";
-const disabledStyle = "disabled:bg-mono100 disabled:text-mono200";
+const main = "bg-main text-white";
+const secondary = "bg-secondary text-white";
+const button01 = "bg-button01 text-white";
+const disabledStyle = "disabled:bg-mono100 disabled:button01-mono200";
 
 const color: Record<PrimaryButtonTheme, string> = {
-  base,
   main,
-  social,
-  text,
+  secondary,
+  button01,
+};
+
+const colorHover: Record<PrimaryHoverButton, string> = {
+  mainHover: "hover:bg-main-hover",
+  secondaryHover: "hover:bg-secondary-hover",
+  button01Hover: "hover:bg-button01-hover",
 };
 
 export default function PrimaryButton({
   theme,
-
+  themeHoverColor,
   children,
   onClick,
   disabled,
 }: IfPrimaryButtonProps) {
   return (
     <button
-      className={`
-      rounded-primary-button
-      w-full
-      h-[59px]
-      ${color[theme]}
-      ${disabledStyle}
-     `}
+      className={classNames(
+        "rounded-primary-button w-full h-[59px] transition-all font-bold",
+        color[theme],
+        colorHover[themeHoverColor],
+        disabledStyle
+      )}
       disabled={disabled}
       onClick={onClick}
     >

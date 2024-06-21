@@ -21,10 +21,18 @@ const meta = {
     theme: {
       control: {
         type: "select",
-        options: ["base", "main", "social", "text"],
+        options: ["main", "secondary", "button01"],
       },
-      description: "버튼 테마",
-      defaultValue: "base",
+      description: "버튼 색상 테마",
+      defaultValue: "main",
+    },
+    themeHoverColor: {
+      control: {
+        type: "select",
+        options: ["mainHover", "secondaryHover", "button01Hover"],
+      },
+      description: "버튼 호버 색상",
+      defaultValue: "mainHover",
     },
     children: {
       control: "text",
@@ -46,34 +54,29 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Base: Story = {
-  args: {
-    children: "Button",
-    theme: "base",
-    disabled: false,
-  },
-};
-
-export const Main: Story = {
+export const main: Story = {
   args: {
     children: "Button",
     theme: "main",
+    themeHoverColor: "mainHover",
     disabled: false,
   },
 };
 
-export const Social: Story = {
+export const secondary: Story = {
   args: {
     children: "Button",
-    theme: "social",
+    theme: "secondary",
+    themeHoverColor: "secondaryHover",
     disabled: false,
   },
 };
 
-export const Text: Story = {
+export const button01: Story = {
   args: {
     children: "Button",
-    theme: "text",
+    theme: "button01",
+    themeHoverColor: "button01Hover",
     disabled: false,
   },
 };
@@ -81,7 +84,8 @@ export const Text: Story = {
 export const Disabled: Story = {
   args: {
     children: "Button",
-    theme: "base",
+    theme: "main",
+    themeHoverColor: "mainHover",
     disabled: true,
   },
 };
