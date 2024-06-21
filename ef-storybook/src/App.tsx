@@ -4,16 +4,29 @@ import "./App.css";
 import Label from "./stories/components/Label";
 import DefaultTextField from "./stories/components/DefaultTextField";
 import TagList from "./stories/components/TagList";
+import InputList from "./stories/components/InputList";
 
 function App() {
-  const [isError, setIsError] = useState(false);
   return (
-    <div className="bg-primary w-screen h-screen">
-      <TagList
-        tagList={["All", "React", "TypeScript"]}
-        onTagClick={console.log}
-      ></TagList>
-    </div>
+    <></>
+    // <div className="w-[200px]">
+    //   <InputList
+    //     label="테스트"
+    //     bgColor="white"
+    //     placeholder="테스트"
+    //     type="name"
+    //     hoverIsChecked={true}
+    //     isError={true}
+    //     onChange={() => {}}
+    //   ></InputList>
+    // </div>
+
+    // <div className="bg-primary w-screen h-screen">
+    //   <TagList
+    //     tagList={["All", "React", "TypeScript"]}
+    //     onTagClick={console.log}
+    //   ></TagList>
+    // </div>
 
     // <div className=" text-mono200 w-[400px] p-20">
     //   <Label htmlFor="email">이메일</Label>
