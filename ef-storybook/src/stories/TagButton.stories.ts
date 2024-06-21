@@ -16,7 +16,7 @@ const meta = {
       defaultValue: "button",
     },
     isChecked: {
-      control: "boolean",
+      control: { type: "boolean" },
       description: "버튼 활성화 여부",
       defaultValue: false,
     },

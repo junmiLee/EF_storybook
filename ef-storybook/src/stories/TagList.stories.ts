@@ -11,7 +11,9 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     tagList: {
-      control: "text",
+      control: {
+        type: "object",
+      },
       description: "태그 리스트",
       defaultValue: ["tag1", "tag2", "tag3"],
     },
