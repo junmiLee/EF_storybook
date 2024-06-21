@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */ 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -17,13 +17,13 @@ module.exports = {
       body: ["Noto Sans KR"],
     },
     fontSize: {
-      "2xs": "0.625rem",
-      xs: "0.75rem",
-      sm: "0.875rem",
-      primary: "1rem",
-      lg: "1.125rem",
-      xl: "1.5rem",
-      "2xl": "2rem",
+      "2xs": "10px",
+      xs: "12px",
+      sm: "14px",
+      primary: "16px",
+      lg: "18px",
+      xl: "24px",
+      "2xl": "32px",
     },
     colors: {
       primary: "#1b1829",
